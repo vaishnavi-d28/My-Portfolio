@@ -1,0 +1,388 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+        --dark-clr: #081d2c;
+        --second-dark-clr: #112e42;
+        --text-clr:#f1f5f9;
+        --light-text-clr:#c9d9e8;
+        --global-clr: #0fbbff;
+        --btn-clr:#ff499e;
+        }
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+}
+    
+html {
+ overflow-x:hidden ;
+ line-height: calc(1em +0.5rem);
+}
+
+body{
+   font-family: "Jost", serif;
+   background: var(--dark-clr);
+   color: var(--text-clr); 
+   line-height: 1.3rem;
+}
+
+header{
+    width: 100%;
+    background: transparent;
+    z-index: 1000;
+}
+
+.navbar{
+    display: flex;
+    justify-content:  space-between;
+    align-items: center;
+    padding: 0.5rem 10%;
+}
+
+.logo{
+    position: relative;
+    font-size: 2.5rem;
+    color: var(--text-clr);
+}
+
+
+.logo span{
+    color: var(--global-clr);
+}
+
+.navbar ul{
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+    position: relative;
+
+}
+header .navbar ul li{
+    position: relative;
+   margin-right: 20px;
+
+}
+
+header .navbar ul li a{
+    position: relative;
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin-left: 20px ;
+    color: var(--text-clr);
+   transition: 0.5s ease-in-out; ;
+  
+
+}
+
+header .navbar ul li a::after{
+    content: '';
+    position:absolute;
+    background: var(--global-clr);
+    height: 3px;
+    width: 0;
+    bottom: 0;
+    left: -2px;
+    pointer-events: none;
+   
+    
+}
+
+.navbar ul li a:hover , .navbar ul li a.active{
+    color: var(--global-clr);
+    
+}
+
+header .navbar ul li a:hover::after , header .navbar ul li a.ative::after{
+    width: 100%;
+    text-decoration: none;
+
+}
+
+.cvbtn{
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    background: var(--btn-clr);
+    color: var(--text-clr);
+    padding: 12px;
+    box-shadow: 0 0 5px var(--btn-clr);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.cvbtn:hover {
+    box-shadow: 0 0 5px var(--btn-clr),
+                0 0 10px var(--btn-clr),
+                0 0 15px var(--btn-clr);
+}
+
+
+
+section{
+    padding: 2% 10%;
+}
+.hero-container {
+position: relative;
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 4rem 10%;
+}
+
+.hero-image img {
+    height: 600px;
+    
+    min-width: 400px;
+    filter: drop-shadow(0 0 60px var(--global-clr));
+    border-radius: 10%;
+}
+
+.hero-content{
+    max-width: 50%;
+
+}
+
+.hero-content h3{
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 1.4;
+    
+}
+
+.hero-content h1{
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.2;
+
+}
+.hero-content h2{
+    font-size: 2rem;
+    line-height: 1.3;
+}
+
+.hero-content h2 span{
+    color:var(--global-clr)
+}
+
+.hero-content p{
+    font-size:1.2rem ;
+    margin: 2rem 0;
+}
+
+.social-icons{
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+
+}
+
+.social-icons a{
+    display: inline-flex;
+    font-size: 2rem;
+    background: transparent;
+    color: var(--global-clr);
+    transition: 0.5s;   
+}
+
+.social-icons a:hover{
+    transform: translateY(-10px);
+}
+
+.hero-btn{
+    display: flex;
+    gap: 1.5em;
+}
+
+.hero-btn .btn{
+   position: relative;
+   display: inline-flex;
+   align-items: center;
+   justify-content: center;
+   width: 10rem;
+   height: 100%;
+   font-size: 1.3rem;
+   font-weight: 600;
+   padding: 0.6em 0;
+   color: var(--dark-clr);
+   background: var(--global-clr);
+   bottom: 2px solid var(--global-clr);
+   border-radius: 5px;
+   cursor: pointer;
+   overflow: hidden;
+   z-index: 1;
+}
+
+.btn:hover{
+color: var(--global-clr);
+}
+
+
+.hero-btn .btn:nth-child(2){
+    background: transparent;
+    color: var(--global-clr);
+}
+
+.hero-btn .btn:nth-child(2)::before {
+    background: var(--global-clr);
+}
+.hero-btn .btn:nth-child(2):hover{
+    background: var(--dark-clr);
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background : var(--dark-clr);
+    transition: 0.5s;
+    z-index: -1;
+}
+
+.btn:hover::before{
+    width: 100%;
+}
+
+.starts{
+display: flex;
+justify-content: space-around;
+align-items: center;
+flex-wrap:wrap;
+gap: 2rem;
+}
+
+.starts .start:not(:last-child){
+    border-right: 1px solid var(--global-clr);
+   padding-right: 5%;
+}
+
+.starts .start{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    min-width: 200px;
+}
+
+.starts .start h2{
+    font-size: 3.5rem;
+    font-weight: 600;
+}
+
+.starts .start span{
+    display: inline-block;
+    color: var(--light-text-clr);
+    font-size: 1.1rem
+}
+
+/* 
+.name , .grow{
+    color: var(--global-clr);
+    text-shadow: 0 0 5px var(--global-clr),
+                 0 0 10px var(--global-clr),
+                 0 0 20px var(--global-clr);
+                 animation: glow 2s infinite alternate;
+}
+
+@keyframes glow{
+    0%{
+        text-shadow:  0 0 5px var(--global-clr),
+                      0 0 20px var(--global-clr),
+                      0 0 30px var(--global-clr);
+    }
+
+    100%{
+        text-shadow:  0 0 10px var(--global-clr),
+                      0 0 20px var(--global-clr),
+                      0 0 30px var(--global-clr);
+    }
+} */
+
+
+
+
+
+
+
+
+
+
+.navbar a, .navbar ul li {
+    opacity: 0;
+    animation: slideRight 1.5s ease-in-out forwards; 
+    animation-delay: calc(0.2s * var(--i));
+}
+
+@keyframes slideRight{
+  0%{
+    opacity: 0;
+    transform: translate(-150px);
+  }
+
+  100%{
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+.hero-image-animation{
+    opacity: 0;
+    animation: zoombounce 3s ease-in-out forwards;
+    animation-delay: 0.5s; 
+
+}
+
+@keyframes zoombounce{
+    0%{ 
+        opacity: 0;
+        transform: scale(0.5) rotate(-40deg);
+
+    }
+
+    50%{
+        transform: scale(1.1) rotate(0);
+    }
+    100%{
+        opacity: 1;
+        transform: scale(1) rotate(0);
+    }
+}
+
+
+.hero-content-animation > *{
+opacity: 0;
+animation: fadeIn 1s ease-in-out forwards;
+animation-delay: calc(0.5 * var(--i));
+}
+
+@keyframes fadeIn{
+    0%{
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.starts-animation{
+    opacity: 0;
+    animation: fadeIn 2s ease-in-out forwards;
+    animation-delay: 2s;
+}
